@@ -97,7 +97,42 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # can only move left and right and swap cards is bubble sort the best or insertion sort ?
+        # Bubble sort
+        # if can move right
+        #   swap_item
+        #   move_right
+        #   compare_item
+        #   if less
+        #       swap_item
+        #       notify light
+        #   move left
+        #   swap_item
+        #   movie right
+        # else move all the way left
+        # reset light
+        # repeat until no swaps where preformed or light is not on
+        # how do I keep track of that
+        # oh the light that's what it is used for
+
+        while True:
+            if self.can_move_right():
+                self.swap_item()
+                self.move_right()
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.set_light_on()
+                self.move_left()
+                self.swap_item()
+                self.move_right()
+            else:
+                if not self.light_is_on():
+                    break
+                while self.can_move_left():
+                    self.move_left()
+                self.set_light_off()
+
+
 
 
 if __name__ == "__main__":

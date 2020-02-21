@@ -22,4 +22,6 @@ then when in the middle of either the upper or lower floors repeat this process
 then if its the last room remaining then its it the floor highest you can drop it
 or if you are safe in one floor and it breaks in that floor then the floor previous is the right one
 
+Big O: log(n)
+
 
